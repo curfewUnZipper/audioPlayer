@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require('express')
 const app= express()
 app.set('view engine','ejs') //anpother engine: pug
@@ -27,4 +28,4 @@ app.use(express.static("public")) //use: /index.html in URL
 //middleware for parsing JSON from forms, requests
 //app.use(express.json()) //allows us to touch json from body
 
-app.listen(3000)
+app.listen(process.env.PORT)
