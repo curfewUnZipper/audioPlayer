@@ -1,7 +1,7 @@
 require("dotenv").config()
 const express = require('express')
 const app= express()
-// app.set('view engine','ejs') //anpother engine: pug
+app.set('view engine','ejs') //anpother engine: pug
 app.use(express.urlencoded({extended:true})) //middleware to excess form values
 
 //bootstrap + jquery
