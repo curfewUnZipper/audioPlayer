@@ -1,5 +1,6 @@
 require("dotenv").config()
 const express = require('express')
+const path=require("path")
 const app= express()
 app.set('view engine','ejs') //anpother engine: pug
 app.use(express.urlencoded({extended:true})) //middleware to excess form values
@@ -11,15 +12,12 @@ app.use(express.urlencoded({extended:true})) //middleware to excess form values
 
 
 app.get("/music",(req,res) => {
-    const fileNames = require("/workspace/views/fileNames.js")
-    // const fileNames = require("D:/audioSelector/audioSelector/expressJS/views/fileNames.js")
-
-    //res.status(200).json({"message":"errorCode 500"})
-    // res.render('app',{text:"Cause a Raucous in the World!",
-    //  source:"Aloona Larionova - Good Form Cover.mp3",
-    //     files:songs}) 
+    const fileNames = require(path.join(__dirname,"views","fileNames.js"))
+    //res.render('app',{text:"Cause a Raucous in the World!",files:fileNames.songs}) 
     //res.redirect('minimum.html')
-    res.render('mini',{pathCheck:__filename,fileNamePath:fileNames.pathIs})
+    res.render('mini',{pathCheck:__filename,
+                        fileNamePath:fileNames.pathIs,
+                        files:fileNames.songs})
 })
 
 

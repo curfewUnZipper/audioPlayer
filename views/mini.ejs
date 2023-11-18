@@ -12,6 +12,9 @@
     <br>
     <%= "EJS : " + __filename %>
     <br>
-    <%= "fileName : " + locals.fileNamePath %>
+    <%= "fileName : " + locals.fileNamePath %><br>
+    <% locals.files.forEach(x=>{ %>
+        <p><%= x.replace(/%20/g," ") %></p>
+    <% }) %>
 </body>
 </html>
