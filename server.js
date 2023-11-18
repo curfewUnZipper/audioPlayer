@@ -3,7 +3,7 @@ const express = require('express')
 const app= express()
 app.set('view engine','ejs') //anpother engine: pug
 app.use(express.urlencoded({extended:true})) //middleware to excess form values
-
+console.log("Path of server.js is => "+__filename)
 //bootstrap + jquery
 // app.use("/css",express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")))
 // app.use("/js",express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")))
@@ -18,7 +18,7 @@ app.get("/music",(req,res) => {
     // res.render('app',{text:"Cause a Raucous in the World!",
     //  source:"Aloona Larionova - Good Form Cover.mp3",
     //     files:songs}) 
-    res.sendFile(minimum.html)
+    res.sendFile('minimum.html')
     // res.render(mini)
 })
 
