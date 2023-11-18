@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:true})) //middleware to excess form values
 
 
 app.get("/music",(req,res) => {
-    // const songs = require("D:/audioSelector/audioSelector/expressJS/views/fileNames.js")
+    const songs = require("D:/audioSelector/audioSelector/expressJS/views/fileNames.js")
 
     //res.status(200).json({"message":"errorCode 500"})
 
@@ -19,6 +19,7 @@ app.get("/music",(req,res) => {
     //  source:"Aloona Larionova - Good Form Cover.mp3",
     //     files:songs}) 
     res.send("Minimum Start")
+    res.render(mini)
 })
 
 
