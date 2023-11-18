@@ -13,11 +13,11 @@ app.use(express.urlencoded({extended:true})) //middleware to excess form values
 
 app.get("/music",(req,res) => {
     const fileNames = require(path.join(__dirname,"views","fileNames.js"))
-    //res.render('app',{text:"Cause a Raucous in the World!",files:fileNames.songs}) 
+    res.render('app',{text:"Cause a Raucous in the World!",files:fileNames.songs}) 
     //res.redirect('minimum.html')
-    res.render('mini',{pathCheck:__filename,
-                        fileNamePath:fileNames.pathIs,
-                        files:fileNames.songs})
+    // res.render('mini',{pathCheck:__filename,
+    //                     fileNamePath:fileNames.pathIs,
+    //                     files:fileNames.songs})
 })
 
 
