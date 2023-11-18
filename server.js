@@ -18,8 +18,8 @@ app.get("/music",(req,res) => {
     // res.render('app',{text:"Cause a Raucous in the World!",
     //  source:"Aloona Larionova - Good Form Cover.mp3",
     //     files:songs}) 
-    res.redirect('minimum.html')
-    // res.render(mini)
+    //res.redirect('minimum.html')
+    res.render(mini)
 })
 
 
