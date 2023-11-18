@@ -4,7 +4,8 @@
   "description": "node -v //to check node present\r npm init -y //setup basic json package\r npm i express //install express library\r npm i --save-dev nodemon //restarting server on change\r //edit\r \"scripts\": {\r \"devStart\": \"nodemon server.js\" } //starts server",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
