@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:true})) //middleware to excess form values
 // app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")))
 
 
-app.get("/music",(req,res) => {
+app.get("/",(req,res) => {
     const fileNames = require(path.join(__dirname,"views","fileNames.js"))
     res.render('app',{text:"Cause a Raucous in the World!",files:fileNames.songs}) 
     //res.redirect('minimum.html')
