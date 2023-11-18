@@ -8,6 +8,6 @@ filenames.forEach(element => {
       songs.push(element.replace(/ /g,"%20"))}
   else{filenames.splice(filenames.indexOf(element),1)}
 });
-console.log(songs)
+//console.log(songs)
 module.exports.songs=songs
 module.exports.pathIs = __filename
