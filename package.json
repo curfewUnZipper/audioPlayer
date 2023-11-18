@@ -2,9 +2,9 @@
   "name": "learningexpress",
   "version": "1.0.0",
   "description": "node -v //to check node present\r npm init -y //setup basic json package\r npm i express //install express library\r npm i --save-dev nodemon //restarting server on change\r //edit\r \"scripts\": {\r \"devStart\": \"nodemon server.js\" } //starts server",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
