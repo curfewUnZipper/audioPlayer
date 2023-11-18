@@ -11,8 +11,8 @@ app.use(express.urlencoded({extended:true})) //middleware to excess form values
 
 
 app.get("/music",(req,res) => {
-    // const songs = require("/workspace/views/fileNames.js")
-    const fileNames = require("D:/audioSelector/audioSelector/expressJS/views/fileNames.js")
+    const songs = require("/workspace/views/fileNames.js")
+    // const fileNames = require("D:/audioSelector/audioSelector/expressJS/views/fileNames.js")
 
     //res.status(200).json({"message":"errorCode 500"})
     // res.render('app',{text:"Cause a Raucous in the World!",
