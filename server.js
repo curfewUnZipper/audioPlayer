@@ -11,15 +11,15 @@ app.use(express.urlencoded({extended:true})) //middleware to excess form values
 
 
 app.get("/music",(req,res) => {
-    //const songs = require("D:/audioSelector/audioSelector/expressJS/views/fileNames.js")
+    // const songs = require("/workspace/views/fileNames.js")
+    const fileNames = require("D:/audioSelector/audioSelector/expressJS/views/fileNames.js")
 
     //res.status(200).json({"message":"errorCode 500"})
-    //console.log("Path of server.js is => "+__filename)
     // res.render('app',{text:"Cause a Raucous in the World!",
     //  source:"Aloona Larionova - Good Form Cover.mp3",
     //     files:songs}) 
     //res.redirect('minimum.html')
-    res.render('mini',{pathCheck:__filename})
+    res.render('mini',{pathCheck:__filename,fileNamePath:fileNames.pathIs})
 })
 
 
