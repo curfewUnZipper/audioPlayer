@@ -19,7 +19,7 @@ app.get("/music",(req,res) => {
     //  source:"Aloona Larionova - Good Form Cover.mp3",
     //     files:songs}) 
     //res.redirect('minimum.html')
-    res.render(mini)
+    res.render('mini')
 })
 
 
